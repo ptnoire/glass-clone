@@ -14,6 +14,7 @@ html {
 body { margin: 0; }
 
 h1, h2, h3, p, a { color: var(--white-); }
+h1 { font-size: 4vw; }
 
 .topNav {
     display: flex;
@@ -33,6 +34,13 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+.section_2 h1 {
+    margin: 0 25% 0 10%;
+}
+.section_2 p {
     text-align: center;
 }
 
@@ -64,7 +72,7 @@ a {
 }
 
 section {
-    height: 100vh;
+    height: 125vh;
     background: rgb(54,68,104);
     background: radial-gradient(circle, rgba(54,68,104,1) 0%, rgba(29,32,39,1) 64%);
 }
