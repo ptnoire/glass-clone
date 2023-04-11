@@ -4,7 +4,9 @@
     --dark-blue-: #364468;
     --white-: #f9fefd;
     --yellow-: #ea9f4c;
+    --yellow-clear-: #eaa04c4e;
     --green-: #4e6762;
+    --gray-: #a3a3a3;
 }
 
 html {
@@ -15,26 +17,48 @@ body { margin: 0; }
 
 h1, h2, h3, p, a { color: var(--white-); }
 h1 { font-size: 4vw; }
+a { text-decoration: none;}
 
 .topNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    background: rgb(54,68,104);
-    background: radial-gradient(circle, rgba(54,68,104,1) 0%, rgba(29,32,39,1) 64%);
 }
 
 a {
     padding: 10px;
 }
 
+i {
+    padding-right: 12px;
+}
+.yellow { color: var(--yellow-); }
+
+.btn_signUp {
+    border: 1px solid var(--yellow-);
+    background-color: var(--yellow-clear-);
+    border-radius: 5px;
+    color: var(--yellow-);
+    text-align: center;
+    padding: 10px;
+}
 .section_1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.section_1 h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    animation: fadedownin 1s ease-in;
 }
 
 .section_2 h1 {
@@ -48,12 +72,32 @@ a {
     border: 1px solid var(--dark-blue-);
     border-radius: 10px;
     background-color: var(--black-blend-);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    transition: all .5s;
+}
+
+.imgBox {
+    height: 50%;
+    width: auto;
+}
+
+.box img {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box p {
+    color: var(--gray-);
+    text-align: left;
+    font-size: .8rem;
 }
 
 .box-row {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -75,4 +119,14 @@ section {
     height: 125vh;
     background: rgb(54,68,104);
     background: radial-gradient(circle, rgba(54,68,104,1) 0%, rgba(29,32,39,1) 64%);
+}
+
+.blur {
+    filter: blur(3px);
+    transition: all .5s;
+}
+
+@keyframes fadedownin {
+    0% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0);}
 }
